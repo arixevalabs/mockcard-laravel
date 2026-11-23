@@ -1,0 +1,17 @@
+{
+  "name": "mockcard/laravel",
+  "description": "MockCard for Laravel: probe-guard middleware, chaos runs from Artisan and Pest/PHPUnit.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [{ "name": "Arixeva Labs", "email": "hello@arixevalabs.com" }],
+  "keywords": ["mockcard", "laravel", "payments", "webhooks", "stripe", "razorpay", "chaos testing", "idempotency", "webhook testing", "pest"],
+  "homepage": "https://www.mockcard.io/docs",
+  "support": { "issues": "https://github.com/arixevalabs/mockcard-laravel/issues", "source": "https://github.com/arixevalabs/mockcard-laravel", "docs": "https://www.mockcard.io/docs" },
+  "require": { "php": ">=8.2", "mockcard/mockcard-php": "^2.0", "illuminate/support": "^11.0|^12.0", "illuminate/console": "^11.0|^12.0", "illuminate/http": "^11.0|^12.0" },
+  "require-dev": { "orchestra/testbench": "^10.0", "phpunit/phpunit": "^11.5" },
+  "autoload": { "psr-4": { "MockCard\\Laravel\\": "src/" } },
+  "autoload-dev": { "psr-4": { "MockCard\\Laravel\\Tests\\": "tests/" } },
+  "extra": { "laravel": { "providers": ["MockCard\\Laravel\\MockCardServiceProvider"], "aliases": { "MockCard": "MockCard\\Laravel\\Facades\\MockCard" } } },
+  "minimum-stability": "stable",
+  "scripts": { "test": "phpunit tests" }
+}
